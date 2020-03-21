@@ -21,7 +21,7 @@ export const Success = ({ posts }) => {
   return posts.map((post) => (
     <article key={post.id}>
       <header>
-        <Link to={routes.blogPost()}>{post.title}</Link>
+        <Link to={routes.blogPost({ id: post.id })}>{post.title}</Link>
       </header>
       <p>{post.body}</p>
       <div>Posted at: {post.createdAt}</div>
